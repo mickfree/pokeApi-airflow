@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mick-airflow:
+    image: mick-airflow:latest
+
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"
+
+    command: airflow standalone

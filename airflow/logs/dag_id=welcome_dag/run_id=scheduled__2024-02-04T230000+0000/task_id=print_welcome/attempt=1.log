@@ -1,0 +1,15 @@
+[2024-02-05T23:41:47.764+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.print_welcome scheduled__2024-02-04T23:00:00+00:00 [queued]>
+[2024-02-05T23:41:47.778+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.print_welcome scheduled__2024-02-04T23:00:00+00:00 [queued]>
+[2024-02-05T23:41:47.779+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-05T23:41:47.810+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): print_welcome> on 2024-02-04 23:00:00+00:00
+[2024-02-05T23:41:47.813+0000] {standard_task_runner.py:60} INFO - Started process 106 to run task
+[2024-02-05T23:41:47.816+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'print_welcome', 'scheduled__2024-02-04T23:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmp4w70r8ik']
+[2024-02-05T23:41:47.817+0000] {standard_task_runner.py:88} INFO - Job 32: Subtask print_welcome
+[2024-02-05T23:41:47.892+0000] {task_command.py:423} INFO - Running <TaskInstance: welcome_dag.print_welcome scheduled__2024-02-04T23:00:00+00:00 [running]> on host 86f40dfcaade
+[2024-02-05T23:41:48.029+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='print_welcome' AIRFLOW_CTX_EXECUTION_DATE='2024-02-04T23:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-04T23:00:00+00:00'
+[2024-02-05T23:41:48.029+0000] {logging_mixin.py:188} INFO - Welcome to Airflow!
+[2024-02-05T23:41:48.030+0000] {logging_mixin.py:188} INFO - Today is 2024-02-05
+[2024-02-05T23:41:48.030+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-05T23:41:48.042+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=print_welcome, execution_date=20240204T230000, start_date=20240205T234147, end_date=20240205T234148
+[2024-02-05T23:41:48.109+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-05T23:41:48.145+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
